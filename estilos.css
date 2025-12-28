@@ -1,0 +1,234 @@
+/* ===================================================
+   1. RESET & BASE
+=================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: rgba(169, 104, 237, 1);
+    --color-secondary: #10001F;
+    --color-light: #f8fafc;
+    --color-white: #ffffff;
+
+    --font-main: Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--color-secondary);
+    background-color: var(--color-white);
+}
+
+/* ===================================================
+   2. UTILITÁRIOS
+=================================================== */
+
+.container {
+    padding: 4rem 5vw;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/* ===================================================
+   3. COMPONENTES
+=================================================== */
+
+/* Card reutilizável */
+.card {
+    background-color: var(--color-light);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Botão */
+.button {
+    padding: 0.8rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+}
+
+/* Formulário */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__input,
+.form__textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+/* ===================================================
+   4. HEADER & NAVEGAÇÃO
+=================================================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5vw;
+    background-color: var(--color-light);
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav__menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+/* ===================================================
+   5. HERO (HOME)
+=================================================== */
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(
+            to right,
+            var(--color-primary),
+            rgba(245, 130, 174, 1)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.hero__content {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+/* ===================================================
+   6. ABOUT
+=================================================== */
+
+.about {
+    padding: 4rem 5vw;
+}
+
+.about__text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ===================================================
+   7. SERVICES (CSS GRID)
+=================================================== */
+
+.services {
+    padding: 4rem 5vw;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+/* ===================================================
+   8. TESTIMONIALS
+=================================================== */
+
+.testimonials {
+    padding: 4rem 5vw;
+}
+
+.testimonials__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.testimonial {
+    max-width: 300px;
+    background-color: var(--color-light);
+    padding: 1.5rem;
+    border-left: 5px solid var(--color-primary);
+}
+
+.testimonial__author {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* ===================================================
+   9. CONTACT
+=================================================== */
+
+.contact {
+    padding: 4rem 5vw;
+}
+
+.contact__container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact__info {
+    flex: 1;
+}
+
+/* ===================================================
+   10. FOOTER
+=================================================== */
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+/* ===================================================
+   11. RESPONSIVIDADE
+=================================================== */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav__menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact__container {
+        flex-direction: column;
+    }
+}
